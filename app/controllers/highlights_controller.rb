@@ -2,8 +2,6 @@ class HighlightsController < ApplicationController
   before_action :set_highlight, only: [:show, :edit, :update, :destroy]
 
 
-  require 'pry-byebug'
-
   # GET /highlights
   # GET /highlights.json
   def index

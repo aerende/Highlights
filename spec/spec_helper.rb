@@ -3,7 +3,13 @@
 # The generated `.rspec` file contains `--require spec_helper` which will cause this
 # file to always be loaded, without a need to explicitly require it in any files.
 
-  require_relative 'highlights_controller.rb'
+require 'rubygems'
+ENV["RAILS_ENV"] ||= 'test'
+require File.expand_path("../../config/environment", __FILE__)
+
+
+  require_relative '../app/controllers/application_controller.rb'
+  require_relative '../app/controllers/highlights_controller.rb'
 
 #
 # Given that it is always loaded, you are encouraged to keep this file as
@@ -18,6 +24,9 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
+
+  config.include Rails.application.routes.url_helpers
+
 # The settings below are suggested to provide a good initial experience
 # with RSpec, but feel free to customize to your heart's content.
 =begin

@@ -48,3 +48,4 @@ gem 'spring',        group: :development
 gem 'devise'
 gem 'pg'
 gem 'pry-byebug'
+gem 'rspec-rails'
